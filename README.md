@@ -130,7 +130,7 @@ Body: {"skill_ids": [1, 6]}
 **Vivek Chaurasiya**  
 BTech CSE Student | AI/ML & Data Science Enthusiast  
 📧 Email: vivekchaurasiya9589@gmail.com  
-🔗 LinkedIn: linkedin.com/in/vivek-chaurasiya-722037315
+🔗 LinkedIn: (linkedin.com/in/vivek-chaurasiya-722037315)
 💼 Portfolio: [Your Website](#)
 
 ## 📄 License
