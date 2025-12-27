@@ -32,6 +32,11 @@ MANIFEST
 *.manifest
 *.spec
 
+# Database
+*.db
+*.sqlite3
+*.db-journal
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
@@ -138,11 +143,44 @@ celerybeat.pid
 .env
 .envrc
 .venv
+venv/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+frontend/.env
+
+# Environment Variables - VERY IMPORTANT!
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# OS
+Thumbs.db
+.DS_Store
 
 # Spyder project settings
 .spyderproject
