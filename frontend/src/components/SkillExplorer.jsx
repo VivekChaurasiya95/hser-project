@@ -136,7 +136,10 @@ const HSERSkillExplorer = () => {
                 <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>Analyze extinction risk for {filteredSkills.length} skills</p>
               </div>
             </div>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all">
+            <button
+             onClick={() => alert('Export feature coming soon! This will generate a PDF/CSV report.')}
+             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all"
+            >
               Export Report
             </button>
           </div>
