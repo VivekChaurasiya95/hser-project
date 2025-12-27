@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "name": "Manual SQL Reporting",
+    "category": "Data",
+    "automation": 0.85,
+    "creativity": 0.2,
+    "toolGrowth": 0.9,
+    "adoption": 0.8
+  },
+  {
+    "id": 2,
+    "name": "CRUD Backend Development",
+    "category": "Development",
+    "automation": 0.7,
+    "creativity": 0.3,
+    "toolGrowth": 0.85,
+    "adoption": 0.75
+  },
+  {
+    "id": 3,
+    "name": "Manual Software Testing",
+    "category": "QA",
+    "automation": 0.9,
+    "creativity": 0.15,
+    "toolGrowth": 0.95,
+    "adoption": 0.85
+  },
+  {
+    "id": 4,
+    "name": "Excel Dashboarding",
+    "category": "Analytics",
+    "automation": 0.8,
+    "creativity": 0.25,
+    "toolGrowth": 0.8,
+    "adoption": 0.7
+  },
+  {
+    "id": 5,
+    "name": "Frontend UI Coding (Basic)",
+    "category": "Development",
+    "automation": 0.65,
+    "creativity": 0.4,
+    "toolGrowth": 0.75,
+    "adoption": 0.6
+  },
+  {
+    "id": 6,
+    "name": "Prompt Engineering",
+    "category": "AI",
+    "automation": 0.3,
+    "creativity": 0.8,
+    "toolGrowth": 0.95,
+    "adoption": 0.7
+  },
+  {
+    "id": 7,
+    "name": "Data Labeling",
+    "category": "Data",
+    "automation": 0.75,
+    "creativity": 0.2,
+    "toolGrowth": 0.85,
+    "adoption": 0.7
+  },
+  {
+    "id": 8,
+    "name": "API Integration",
+    "category": "Development",
+    "automation": 0.6,
+    "creativity": 0.35,
+    "toolGrowth": 0.7,
+    "adoption": 0.65
+  },
+  {
+    "id": 9,
+    "name": "DevOps Automation",
+    "category": "Operations",
+    "automation": 0.5,
+    "creativity": 0.5,
+    "toolGrowth": 0.8,
+    "adoption": 0.75
+  },
+  {
+    "id": 10,
+    "name": "System Debugging",
+    "category": "Development",
+    "automation": 0.4,
+    "creativity": 0.7,
+    "toolGrowth": 0.6,
+    "adoption": 0.5
+  },
+  {
+    "id": 11,
+    "name": "Code Refactoring",
+    "category": "Development",
+    "automation": 0.55,
+    "creativity": 0.6,
+    "toolGrowth": 0.65,
+    "adoption": 0.55
+  },
+  {
+    "id": 12,
+    "name": "ETL Data Pipelines",
+    "category": "Data",
+    "automation": 0.7,
+    "creativity": 0.3,
+    "toolGrowth": 0.75,
+    "adoption": 0.7
+  },
+  {
+    "id": 13,
+    "name": "Cloud Infrastructure Setup",
+    "category": "Operations",
+    "automation": 0.6,
+    "creativity": 0.4,
+    "toolGrowth": 0.8,
+    "adoption": 0.75
+  },
+  {
+    "id": 14,
+    "name": "Technical Documentation Writing",
+    "category": "Documentation",
+    "automation": 0.5,
+    "creativity": 0.6,
+    "toolGrowth": 0.7,
+    "adoption": 0.6
+  },
+  {
+    "id": 15,
+    "name": "UI/UX Prototyping",
+    "category": "Design",
+    "automation": 0.45,
+    "creativity": 0.75,
+    "toolGrowth": 0.65,
+    "adoption": 0.6
+  },
+  {
+    "id": 16,
+    "name": "Cybersecurity Monitoring",
+    "category": "Security",
+    "automation": 0.65,
+    "creativity": 0.4,
+    "toolGrowth": 0.75,
+    "adoption": 0.7
+  },
+  {
+    "id": 17,
+    "name": "Database Administration",
+    "category": "Data",
+    "automation": 0.6,
+    "creativity": 0.35,
+    "toolGrowth": 0.7,
+    "adoption": 0.65
+  },
+  {
+    "id": 18,
+    "name": "Machine Learning Model Training",
+    "category": "AI",
+    "automation": 0.5,
+    "creativity": 0.7,
+    "toolGrowth": 0.85,
+    "adoption": 0.75
+  },
+  {
+    "id": 19,
+    "name": "Model Deployment (MLOps)",
+    "category": "AI",
+    "automation": 0.55,
+    "creativity": 0.5,
+    "toolGrowth": 0.8,
+    "adoption": 0.7
+  },
+  {
+    "id": 20,
+    "name": "Low-Code / No-Code Development",
+    "category": "Development",
+    "automation": 0.8,
+    "creativity": 0.3,
+    "toolGrowth": 0.9,
+    "adoption": 0.85
+  },
+  {
+    "id": 21,
+    "name": "Software Architecture Design",
+    "category": "Development",
+    "automation": 0.3,
+    "creativity": 0.85,
+    "toolGrowth": 0.5,
+    "adoption": 0.4
+  },
+  {
+    "id": 22,
+    "name": "Performance Optimization",
+    "category": "Development",
+    "automation": 0.45,
+    "creativity": 0.65,
+    "toolGrowth": 0.6,
+    "adoption": 0.55
+  },
+  {
+    "id": 23,
+    "name": "Code Review & Quality Assurance",
+    "category": "QA",
+    "automation": 0.6,
+    "creativity": 0.5,
+    "toolGrowth": 0.75,
+    "adoption": 0.7
+  },
+  {
+    "id": 24,
+    "name": "Legacy System Maintenance",
+    "category": "Operations",
+    "automation": 0.4,
+    "creativity": 0.55,
+    "toolGrowth": 0.5,
+    "adoption": 0.45
+  },
+  {
+    "id": 25,
+    "name": "Technical Support Engineering",
+    "category": "Support",
+    "automation": 0.7,
+    "creativity": 0.35,
+    "toolGrowth": 0.8,
+    "adoption": 0.75
+  },
+  {
+    "id": 26,
+    "name": "Scripting & Automation",
+    "category": "Development",
+    "automation": 0.65,
+    "creativity": 0.45,
+    "toolGrowth": 0.7,
+    "adoption": 0.65
+  },
+  {
+    "id": 27,
+    "name": "Data Visualization Engineering",
+    "category": "Analytics",
+    "automation": 0.5,
+    "creativity": 0.6,
+    "toolGrowth": 0.65,
+    "adoption": 0.6
+  },
+  {
+    "id": 28,
+    "name": "Requirements Engineering",
+    "category": "Documentation",
+    "automation": 0.4,
+    "creativity": 0.7,
+    "toolGrowth": 0.55,
+    "adoption": 0.5
+  },
+  {
+    "id": 29,
+    "name": "Software Estimation & Effort Planning",
+    "category": "Management",
+    "automation": 0.55,
+    "creativity": 0.5,
+    "toolGrowth": 0.6,
+    "adoption": 0.55
+  },
+  {
+    "id": 30,
+    "name": "Version Control Management (Git Operations)",
+    "category": "Development",
+    "automation": 0.7,
+    "creativity": 0.25,
+    "toolGrowth": 0.75,
+    "adoption": 0.8
+  },
+  {
+    "id": 31,
+    "name": "Build & Release Management",
+    "category": "Operations",
+    "automation": 0.75,
+    "creativity": 0.3,
+    "toolGrowth": 0.85,
+    "adoption": 0.8
+  },
+  {
+    "id": 32,
+    "name": "Configuration Management",
+    "category": "Operations",
+    "automation": 0.7,
+    "creativity": 0.35,
+    "toolGrowth": 0.8,
+    "adoption": 0.75
+  },
+  {
+    "id": 33,
+    "name": "Distributed Systems Engineering",
+    "category": "Development",
+    "automation": 0.35,
+    "creativity": 0.8,
+    "toolGrowth": 0.55,
+    "adoption": 0.5
+  },
+  {
+    "id": 34,
+    "name": "Event-Driven Architecture Design",
+    "category": "Development",
+    "automation": 0.4,
+    "creativity": 0.75,
+    "toolGrowth": 0.6,
+    "adoption": 0.55
+  },
+  {
+    "id": 35,
+    "name": "Message Queue Management (Kafka/RabbitMQ)",
+    "category": "Operations",
+    "automation": 0.55,
+    "creativity": 0.45,
+    "toolGrowth": 0.7,
+    "adoption": 0.65
+  },
+  {
+    "id": 36,
+    "name": "System Reliability Engineering (SRE)",
+    "category": "Operations",
+    "automation": 0.5,
+    "creativity": 0.6,
+    "toolGrowth": 0.7,
+    "adoption": 0.65
+  },
+  {
+    "id": 37,
+    "name": "Fault Tolerance Engineering",
+    "category": "Development",
+    "automation": 0.45,
+    "creativity": 0.7,
+    "toolGrowth": 0.65,
+    "adoption": 0.6
+  },
+  {
+    "id": 38,
+    "name": "Data Cleaning & Preprocessing",
+    "category": "Data",
+    "automation": 0.8,
+    "creativity": 0.25,
+    "toolGrowth": 0.85,
+    "adoption": 0.8
+  },
+  {
+    "id": 39,
+    "name": "Feature Engineering",
+    "category": "AI",
+    "automation": 0.6,
+    "creativity": 0.55,
+    "toolGrowth": 0.75,
+    "adoption": 0.7
+  },
+  {
+    "id": 40,
+    "name": "Data Quality Assurance",
+    "category": "Data",
+    "automation": 0.7,
+    "creativity": 0.35,
+    "toolGrowth": 0.8,
+    "adoption": 0.75
+  },
+  {
+    "id": 41,
+    "name": "Business Intelligence Report Development",
+    "category": "Analytics",
+    "automation": 0.75,
+    "creativity": 0.3,
+    "toolGrowth": 0.8,
+    "adoption": 0.75
+  },
+  {
+    "id": 42,
+    "name": "Data Governance & Compliance",
+    "category": "Data",
+    "automation": 0.5,
+    "creativity": 0.6,
+    "toolGrowth": 0.65,
+    "adoption": 0.6
+  },
+  {
+    "id": 43,
+    "name": "Identity & Access Management (IAM)",
+    "category": "Security",
+    "automation": 0.6,
+    "creativity": 0.4,
+    "toolGrowth": 0.7,
+    "adoption": 0.65
+  },
+  {
+    "id": 44,
+    "name": "Vulnerability Assessment & Penetration Testing",
+    "category": "Security",
+    "automation": 0.55,
+    "creativity": 0.6,
+    "toolGrowth": 0.7,
+    "adoption": 0.65
+  },
+  {
+    "id": 45,
+    "name": "Network Configuration & Monitoring",
+    "category": "Operations",
+    "automation": 0.65,
+    "creativity": 0.35,
+    "toolGrowth": 0.75,
+    "adoption": 0.7
+  },
+  {
+    "id": 46,
+    "name": "Incident Response Engineering",
+    "category": "Security",
+    "automation": 0.5,
+    "creativity": 0.65,
+    "toolGrowth": 0.7,
+    "adoption": 0.65
+  },
+  {
+    "id": 47,
+    "name": "Backup & Disaster Recovery Planning",
+    "category": "Operations",
+    "automation": 0.6,
+    "creativity": 0.45,
+    "toolGrowth": 0.7,
+    "adoption": 0.65
+  },
+  {
+    "id": 48,
+    "name": "Product Requirement Documentation (PRD Writing)",
+    "category": "Documentation",
+    "automation": 0.55,
+    "creativity": 0.6,
+    "toolGrowth": 0.65,
+    "adoption": 0.6
+  },
+  {
+    "id": 49,
+    "name": "Platform Integration Engineering",
+    "category": "Development",
+    "automation": 0.65,
+    "creativity": 0.4,
+    "toolGrowth": 0.75,
+    "adoption": 0.7
+  },
+  {
+    "id": 50,
+    "name": "Customer Success Engineering",
+    "category": "Support",
+    "automation": 0.5,
+    "creativity": 0.7,
+    "toolGrowth": 0.65,
+    "adoption": 0.6
+  }
+]
