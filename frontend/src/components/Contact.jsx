@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Radar, Mail, Phone, MapPin, Send, MessageCircle, HelpCircle, Book, Shield, FileText, CheckCircle, ChevronDown } from 'lucide-react';
 
-const HSERContactAndSupport = () => {
-  const [isDark, setIsDark] = useState(true);
+const HSERContactAndSupport = ({ isDark }) => {
   const [activePage, setActivePage] = useState('contact');
   const [formData, setFormData] = useState({
     name: '',
@@ -385,7 +384,6 @@ const HSERContactAndSupport = () => {
           </div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {activePage === 'contact' && renderContactPage()}
         {activePage === 'help' && renderHelpPage()}
