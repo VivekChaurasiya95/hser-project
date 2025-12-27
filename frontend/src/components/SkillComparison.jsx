@@ -133,7 +133,9 @@ const HSERSkillComparison = () => {
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Explorer</span>
             </button>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold">
+            <button 
+              onClick={() => alert('Export comparison feature coming soon!')}
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold">
               Export Comparison
             </button>
           </div>
