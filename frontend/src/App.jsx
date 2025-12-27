@@ -1,7 +1,17 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { Radar, Home, Search, GitCompare, BarChart3, User, Info, Mail, HelpCircle, Shield, LogOut, Menu, X } from 'lucide-react';
 
-// Create Auth Context
+// Import all components
+import HSERLanding from './components/Landing';
+import HSERAuth from './components/Auth';
+import HSERSkillExplorer from './components/SkillExplorer';
+import HSERSkillDetail from './components/SkillDetail';
+import HSERSkillComparison from './components/SkillComparison';
+import HSERUserDashboard from './components/UserDashboard';
+import HSERAbout from './components/About';
+import HSERContactAndSupport from './components/Contact';
+
+// Auth Context
 const AuthContext = createContext();
 
 const useAuth = () => {
@@ -12,7 +22,7 @@ const useAuth = () => {
   return context;
 };
 
-// Auth Provider Component
+// Auth Provider
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -47,7 +57,7 @@ const AuthProvider = ({ children }) => {
   );
 };
 
-// Main App Component with Navigation
+// Main App with Router
 const HSERApp = () => {
   const [currentPage, setCurrentPage] = useState('landing');
   const [isDark, setIsDark] = useState(true);
@@ -79,11 +89,10 @@ const HSERApp = () => {
 
   return (
     <div className={`min-h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-50'}`}>
-      {/* Navigation Bar */}
+      {/* Navigation */}
       <nav className={`sticky top-0 z-50 ${isDark ? 'bg-gray-900/95' : 'bg-white/95'} backdrop-blur-lg border-b ${isDark ? 'border-gray-800' : 'border-gray-200'} shadow-lg`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
             <button 
               onClick={() => handleNavigation('landing')}
               className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
@@ -114,7 +123,7 @@ const HSERApp = () => {
               ))}
             </div>
 
-            {/* Right Side Actions */}
+            {/* Right Side */}
             <div className="hidden md:flex items-center space-x-4">
               <button
                 onClick={() => setIsDark(!isDark)}
@@ -156,11 +165,7 @@ const HSERApp = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors"
             >
-              {isMobileMenuOpen ? (
-                <X className={isDark ? 'text-white' : 'text-gray-900'} />
-              ) : (
-                <Menu className={isDark ? 'text-white' : 'text-gray-900'} />
-              )}
+              {isMobileMenuOpen ? <X className={isDark ? 'text-white' : 'text-gray-900'} /> : <Menu className={isDark ? 'text-white' : 'text-gray-900'} />}
             </button>
           </div>
         </div>
@@ -206,16 +211,16 @@ const HSERApp = () => {
         )}
       </nav>
 
-      {/* Main Content */}
+      {/* Main Content - Render Actual Components */}
       <main>
-        {currentPage === 'landing' && <LandingPlaceholder isDark={isDark} onNavigate={handleNavigation} />}
-        {currentPage === 'auth' && <AuthPlaceholder isDark={isDark} onNavigate={handleNavigation} />}
-        {currentPage === 'explorer' && <ExplorerPlaceholder isDark={isDark} />}
-        {currentPage === 'comparison' && <ComparisonPlaceholder isDark={isDark} />}
-        {currentPage === 'dashboard' && isAuthenticated && <DashboardPlaceholder isDark={isDark} user={user} />}
-        {currentPage === 'about' && <AboutPlaceholder isDark={isDark} />}
-        {currentPage === 'contact' && <ContactPlaceholder isDark={isDark} />}
-        {currentPage === 'detail' && <DetailPlaceholder isDark={isDark} />}
+        {currentPage === 'landing' && <HSERLanding isDark={isDark} onNavigate={handleNavigation} />}
+        {currentPage === 'auth' && <HSERAuth isDark={isDark} onNavigate={handleNavigation} />}
+        {currentPage === 'explorer' && <HSERSkillExplorer isDark={isDark} />}
+        {currentPage === 'comparison' && <HSERSkillComparison isDark={isDark} />}
+        {currentPage === 'dashboard' && isAuthenticated && <HSERUserDashboard isDark={isDark} user={user} />}
+        {currentPage === 'about' && <HSERAbout isDark={isDark} />}
+        {currentPage === 'contact' && <HSERContactAndSupport isDark={isDark} />}
+        {currentPage === 'detail' && <HSERSkillDetail isDark={isDark} />}
       </main>
 
       {/* Footer */}
@@ -262,132 +267,7 @@ const HSERApp = () => {
   );
 };
 
-// Placeholder Components
-const LandingPlaceholder = ({ isDark, onNavigate }) => (
-  <div className="min-h-screen flex items-center justify-center p-8">
-    <div className="text-center max-w-4xl">
-      <h1 className={`text-6xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-        Welcome to <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">HSER</span>
-      </h1>
-      <p className={`text-2xl mb-8 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        Predict which skills are becoming obsolete and plan your future accordingly
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <button
-          onClick={() => onNavigate('explorer')}
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transition-all"
-        >
-          Explore Skills
-        </button>
-        <button
-          onClick={() => onNavigate('about')}
-          className={`px-8 py-4 rounded-full text-lg font-semibold border-2 ${isDark ? 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900' : 'border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white'} transition-all`}
-        >
-          Learn More
-        </button>
-      </div>
-    </div>
-  </div>
-);
-
-const AuthPlaceholder = ({ isDark, onNavigate }) => (
-  <div className="min-h-screen flex items-center justify-center p-8">
-    <div className={`w-full max-w-md p-8 rounded-2xl ${isDark ? 'bg-gray-800' : 'bg-white'} border ${isDark ? 'border-gray-700' : 'border-gray-200'}`}>
-      <h2 className={`text-3xl font-bold mb-6 text-center ${isDark ? 'text-white' : 'text-gray-900'}`}>
-        Login / Sign Up
-      </h2>
-      <p className={`text-center mb-8 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        Use the Auth page component from the artifacts above
-      </p>
-      <button
-        onClick={() => onNavigate('dashboard')}
-        className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-xl font-semibold"
-      >
-        Demo Login
-      </button>
-    </div>
-  </div>
-);
-
-const ExplorerPlaceholder = ({ isDark }) => (
-  <div className="min-h-screen p-8">
-    <div className="max-w-7xl mx-auto">
-      <h1 className={`text-4xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-        Skill Explorer
-      </h1>
-      <p className={`text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        Use the Skill Explorer component from the artifacts above to display all 50 skills with risk metrics
-      </p>
-    </div>
-  </div>
-);
-
-const ComparisonPlaceholder = ({ isDark }) => (
-  <div className="min-h-screen p-8">
-    <div className="max-w-7xl mx-auto">
-      <h1 className={`text-4xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-        Skill Comparison
-      </h1>
-      <p className={`text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        Use the Comparison component from the artifacts above
-      </p>
-    </div>
-  </div>
-);
-
-const DashboardPlaceholder = ({ isDark, user }) => (
-  <div className="min-h-screen p-8">
-    <div className="max-w-7xl mx-auto">
-      <h1 className={`text-4xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-        Welcome back, {user?.name || 'User'}!
-      </h1>
-      <p className={`text-xl mb-8 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        Use the Dashboard component from the artifacts above
-      </p>
-    </div>
-  </div>
-);
-
-const AboutPlaceholder = ({ isDark }) => (
-  <div className="min-h-screen p-8">
-    <div className="max-w-7xl mx-auto">
-      <h1 className={`text-4xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-        About HSER
-      </h1>
-      <p className={`text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        Use the About component from the artifacts above
-      </p>
-    </div>
-  </div>
-);
-
-const ContactPlaceholder = ({ isDark }) => (
-  <div className="min-h-screen p-8">
-    <div className="max-w-7xl mx-auto">
-      <h1 className={`text-4xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-        Contact Us
-      </h1>
-      <p className={`text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        Use the Contact component from the artifacts above
-      </p>
-    </div>
-  </div>
-);
-
-const DetailPlaceholder = ({ isDark }) => (
-  <div className="min-h-screen p-8">
-    <div className="max-w-7xl mx-auto">
-      <h1 className={`text-4xl font-bold mb-8 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-        Skill Detail
-      </h1>
-      <p className={`text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        Use the Skill Detail component from the artifacts above
-      </p>
-    </div>
-  </div>
-);
-
-// Root App with Provider
+// Root App
 const App = () => (
   <AuthProvider>
     <HSERApp />
